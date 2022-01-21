@@ -9,7 +9,7 @@ def build_kmers(k):
   print('The length of your sequence is', sequence_length, '.')
   
   kmers = []
-  while sequence_length > k:
+  while sequence_length >= k:
     kmers.append(sequence[0:k])
     sequence = sequence[1:]
     sequence_length -= 1
