@@ -4,11 +4,15 @@
 ## Pipeline
 ### 1. Producing fragments
 #### Separate fragments of size k from fasta file
+##### Run buildKmers:
+```bash
+$ python buildKmers.py
+```
 ```python
-# WITH FASTA FILE ------
-
-import operator
-
+buildKmers("[FILE.FASTA]", n, "OUTPUT.FASTA")
+```
+buildKmers
+```python
 def printSeq(header, seq, k, output):
     with open(output, "a") as output:
         kmers = {}
@@ -40,9 +44,4 @@ def buildKmers(input, k, output):
             else:
                 seq += line.strip()
         printSeq(header, seq, k, output)
-```
-
-Run buildKmers:
-```python
-buildKmers("[FILE.FASTA]", n, "OUTPUT.FASTA")
 ```
