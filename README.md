@@ -7,7 +7,7 @@
 ```python
 # WITH FASTA FILE ------
 
-#import operator
+import operator
 
 def printSeq(header, seq, k, output):
     with open(output, "a") as output:
@@ -40,4 +40,9 @@ def buildKmers(input, k, output):
             else:
                 seq += line.strip()
         printSeq(header, seq, k, output)
+```
+
+Run buildKmers:
+```python
+buildKmers("[FILE.FASTA]", n, "OUTPUT.FASTA")
 ```
